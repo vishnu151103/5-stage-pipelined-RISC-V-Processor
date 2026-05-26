@@ -1,0 +1,29 @@
+always @(*) begin
+
+    case (pc)
+        0  : inst = 32'hAAAAD0B7; // lui  x1,0xAAAAD
+        1  : inst = 32'hCCC08093; // addi x1,x1,-820
+        2  : inst = 32'h55555137; // lui  x2,0x55555
+        3  : inst = 32'h55510113; // addi x2,x2,1365
+        4  : inst = 32'h00400193; // addi x3,x0,4
+        5  : inst = 32'h4020f233;
+        6  : inst = 32'h4020e233;
+        7  : inst = 32'h4020c233;
+        8  : inst = 32'h0a20e2b3;
+        9  : inst = 32'h0a20f2b3;
+        10 : inst = 32'h0a20d2b3;
+        11 : inst = 32'h0a20c2b3;
+        12 : inst = 32'h0820c333;
+        13 : inst = 32'h0820f333;
+        14 : inst = 32'h6980d313;
+        15 : inst = 32'h6870d313;
+        16 : inst = 32'h603093b3;
+        17 : inst = 32'h6030d3b3;
+        18 : inst = 32'h6080d393;
+        19 : inst = 32'h60019413;
+        20 : inst = 32'h60119413;
+        21 : inst = 32'h60209413;
+        default: inst = 32'h00000013;
+    endcase
+
+end
